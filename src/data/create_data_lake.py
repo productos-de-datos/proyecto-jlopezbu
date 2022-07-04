@@ -1,3 +1,8 @@
+"""
+    La siguiente función está programada para construir el esquema básico del
+    datalake. Para ello, se ubica en la carpeta raíz del repositorio y se crean
+    las carpetas necesarias en la carpeta "data_lake"
+"""
 def create_data_lake():
     """Cree el data lake con sus capas.
 
@@ -21,8 +26,19 @@ def create_data_lake():
 
 
     """
-    raise NotImplementedError("Implementar esta función")
+    import os
 
+    os.chdir("../..")
+    # --< Data Lake >-----------------------------------
+    os.mkdir("data_lake")
+    os.mkdir("data_lake/landing")
+    os.mkdir("data_lake/raw")
+    os.mkdir("data_lake/cleansed")
+    os.mkdir("data_lake/business")
+    os.mkdir("data_lake/business/reports")
+    os.mkdir("data_lake/business/reports/figures")
+    os.mkdir("data_lake/business/features")
+    os.mkdir("data_lake/business/forecasts")
 
 if __name__ == "__main__":
     import doctest
