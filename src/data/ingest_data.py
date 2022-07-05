@@ -35,5 +35,5 @@ def ingest_data():
 
 if __name__ == "__main__":
     import doctest
-
+    ingest_data()
     doctest.testmod()
